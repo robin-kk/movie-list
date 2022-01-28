@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import React from "react"
+import { useSelector } from "react-redux"
+import MovieContainer from "./components/MovieContainer"
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+const App=(props)=>{
+const movie=useSelector((state)=>{
+  return state.movie
+ })
+  return <div>
+    <div class="d-flex justify-content-center">
+    <h1>My Big Movie List-{movie.length} </h1>
     </div>
-  );
+    <div class="container-sm">
+    <MovieContainer/>
+    </div>
+  </div>
 }
-
-export default App;
+export default App
