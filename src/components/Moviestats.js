@@ -18,7 +18,8 @@ const Moviestats=()=>{
   return<div class="p-3 mb-2 bg-warning text-dark">.
         <h2>Movie Stats</h2>
         <h3>no of movies-{movie.length}</h3>
-        <h4>{`#1 rank movie:${toprank()}`}</h4>
+        <h4>{`#1 rank movie`}</h4>
+        <b>{toprank()}</b>
 
         </div>
 }
